@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 520" role="img" aria-labelledby="title desc">
+  <title id="title">Symmetrisches Körper-Symbol</title>
+  <desc id="desc">Professioneller, zentrierter Körperumriss mit hervorgehobenen Bereichen für Lernspiel.</desc>
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1c4a7a" flood-opacity="0.16"/>
+    </filter>
+    <linearGradient id="bodyFill" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef8ff"/>
+    </linearGradient>
+    <linearGradient id="outlineGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3a7bd5"/>
+      <stop offset="1" stop-color="#00b4d8"/>
+    </linearGradient>
+    <style>
+      .outline{fill:url(#bodyFill);stroke:url(#outlineGrad);stroke-width:8;stroke-linecap:round;stroke-linejoin:round;filter:url(#softShadow)}
+      .inner{fill:none;stroke:#8fbbe8;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+      .zone{opacity:.88;transition:opacity .25s ease, transform .25s ease;transform-origin:center}
+      .zone-soft{opacity:.2}
+      .pulse{animation:pulse 1.2s ease-in-out infinite}
+      @keyframes pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+    </style>
+  </defs>
+
+  <!-- Center guide: visual content is balanced around x=160 -->
+  <g id="body-symbol" transform="translate(0 0)">
+    <!-- Single symmetric outer contour -->
+    <path class="outline" d="
+      M160 38
+      C135 38 116 57 116 82
+      C116 106 135 126 160 126
+      C185 126 204 106 204 82
+      C204 57 185 38 160 38
+      Z
+
+      M123 140
+      C105 145 91 158 84 177
+      L51 270
+      C47 282 52 295 64 299
+      C76 303 88 297 93 285
+      L113 231
+      L113 331
+      L88 451
+      C85 467 95 482 111 486
+      C127 489 141 479 145 463
+      L160 382
+      L175 463
+      C179 479 193 489 209 486
+      C225 482 235 467 232 451
+      L207 331
+      L207 231
+      L227 285
+      C232 297 244 303 256 299
+      C268 295 273 282 269 270
+      L236 177
+      C229 158 215 145 197 140
+      C185 136 173 134 160 134
+      C147 134 135 136 123 140
+      Z"/>
+
+    <!-- Subtle symmetry line -->
+    <path class="inner" d="M160 145 L160 365" opacity=".28"/>
+
+    <!-- Brain zone -->
+    <g id="zone-brain" class="zone zone-soft">
+      <path d="M137 76 C138 61 151 56 160 66 C169 56 182 61 183 76 C189 81 188 95 178 99 C174 109 162 108 160 101 C158 108 146 109 142 99 C132 95 131 81 137 76Z" fill="#9b7cff"/>
+      <path d="M160 66 C160 77 160 88 160 101 M144 79 C151 78 155 82 157 89 M176 79 C169 78 165 82 163 89" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+    </g>
+
+    <!-- Heart zone -->
+    <g id="zone-heart" class="zone zone-soft">
+      <path d="M160 191 C151 178 130 181 130 200 C130 219 160 236 160 236 C160 236 190 219 190 200 C190 181 169 178 160 191Z" fill="#ff6b7a"/>
+    </g>
+
+    <!-- Stomach / energy zone -->
+    <g id="zone-belly" class="zone zone-soft">
+      <path d="M135 263 C135 238 185 238 185 263 C185 287 173 306 160 306 C147 306 135 287 135 263Z" fill="#ffd166"/>
+      <path d="M150 258 C162 252 174 258 174 272 C174 285 164 292 153 286" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+    </g>
+
+    <!-- Muscles zone -->
+    <g id="zone-muscles" class="zone zone-soft">
+      <path d="M103 204 C92 229 84 254 76 279" fill="none" stroke="#58d68d" stroke-width="12" stroke-linecap="round"/>
+      <path d="M217 204 C228 229 236 254 244 279" fill="none" stroke="#58d68d" stroke-width="12" stroke-linecap="round"/>
+      <path d="M142 340 C137 375 130 411 123 454" fill="none" stroke="#58d68d" stroke-width="12" stroke-linecap="round"/>
+      <path d="M178 340 C183 375 190 411 197 454" fill="none" stroke="#58d68d" stroke-width="12" stroke-linecap="round"/>
+    </g>
+
+    <!-- Shield / vitamins zone -->
+    <g id="zone-shield" class="zone zone-soft">
+      <path d="M160 149 L198 163 L193 204 C190 229 174 249 160 258 C146 249 130 229 127 204 L122 163 Z" fill="#4dd4c6"/>
+      <path d="M145 200 L155 210 L177 184" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>
